@@ -1,6 +1,7 @@
 import snaplogo from "./assets/snaplogo.svg";
 import image from "./assets/image.png";
 import features from "./assets/features.svg";
+import Footer from "./Footer";
 function App() {
   const navigation = [
     { name: "Home", href: "#" },
@@ -52,8 +53,11 @@ function App() {
         <img src={features} className="mx-auto mt-10 w-auto" />
       </div>
       <div className="">
-        <h1 className="mx-auto mt-10 w-fit text-3xl font-medium">Featured Products</h1>
+        <h1 className="mx-auto mt-10 w-fit text-3xl font-medium">
+          Featured Products
+        </h1>
       </div>
+      <Footer></Footer>
     </>
   );
 }

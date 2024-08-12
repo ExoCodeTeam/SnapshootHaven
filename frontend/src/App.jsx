@@ -3,10 +3,11 @@ import image from "./assets/image.png";
 import features from "./assets/features.svg";
 function App() {
   const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" },
+    { name: "Home", href: "#" },
+    { name: "Shop", href: "#" },
+    { name: "About us", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Support", href: "#" },
   ];
 
   return (
@@ -41,21 +42,17 @@ function App() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
         </nav>
       </header>
       <div className="w-full h-full">
         <img src={image} className=" w-auto" />
       </div>
+      <div className="w-full ">
+        <img src={features} className="mx-auto mt-10 w-auto" />
+      </div>
       <div className="">
-        <img src={features} className="mx-auto mt-10 w-auto"/>
+        <h1 className="mx-auto mt-10 w-fit text-3xl font-medium">Featured Products</h1>
       </div>
     </>
   );

@@ -21,8 +21,8 @@ export default function Ads() {
 
     return (
         <div className="mx-[150px] grid grid-cols-2 gap-[20px]">
-            <img src={ads[ad1Index]} alt="Advertisement 1" className="w-full h-auto rounded-md" />
-            <img src={ads[ad2Index]} alt="Advertisement 2" className="w-full h-auto  rounded-md" />
+            <img src={ads[ad1Index]} alt="Advertisement 1" className="w-full  h-full object-cover rounded-md" />
+            <img src={ads[ad2Index]} alt="Advertisement 2" className="w-full  h-full object-cover  rounded-md" />
         </div>
     );
 }

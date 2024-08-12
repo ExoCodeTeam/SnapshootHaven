@@ -80,6 +80,9 @@ export default function Landing() {
                 <Gallery />
             </div>
             <Ads />
+            <div className="mx-[150px] my-[100px]">
+
+            </div>
 
 
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import camera from '../assets/camera.png'
-import camera2 from '../assets/camera2.png'
+import camera2 from '../assets/Camera2.png'
 
 import Product from "./Product";
 

@@ -1,6 +1,8 @@
 import snaplogo from "../assets/snaplogo.svg";
 import image from "../assets/image.png";
 import image1 from "../assets/image1.jpg";
+import blog1 from "../assets/Blog1.png";
+import blog2 from "../assets/Blog2.png";
 
 import features from "../assets/features.svg";
 import search from "../assets/searche.png";
@@ -13,6 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
 import Ads from "./Ads";
+import RecentBlog from "./RecentBlog";
 
 export default function Landing() {
   const navigation = [
@@ -78,8 +81,31 @@ export default function Landing() {
         <Gallery />
       </div>
       <Ads />
-      <div className="mx-[150px] my-[100px]"></div>
-
+      <div className=" my-[100px]">
+        <h1 className="mx-auto mt-10 w-fit text-3xl font-medium">
+          Recent Blog Articles
+        </h1>
+      </div>
+      <div className="mx-[150px] my-[100px] grid grid-cols-3 gap-10">
+        <RecentBlog
+          img={blog1}
+          title="How to Use and Incorporate Symbolism in Photography"
+          desc="Symbolism in photography utilizes visual elements to convey abstract emotions or concepts, adding new levels of meaning and depth."
+          date="August 04,2024"
+        />
+        <RecentBlog
+          img={blog2}
+          title="How to Use and Incorporate Symbolism in Photography"
+          desc="Symbolism in photography utilizes visual elements to convey abstract emotions or concepts, adding new levels of meaning and depth."
+          date="August 04,2024"
+        />
+        <RecentBlog
+          img={blog1}
+          title="How to Use and Incorporate Symbolism in Photography"
+          desc="Symbolism in photography utilizes visual elements to convey abstract emotions or concepts, adding new levels of meaning and depth."
+          date="August 04,2024"
+        />
+      </div>
       <Footer></Footer>
     </div>
   );

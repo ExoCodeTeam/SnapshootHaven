@@ -1,11 +1,10 @@
-import snaplogo from "../assets/snaplogo.svg";
+
 import image from "../assets/image.png";
 import image1 from "../assets/image1.jpg";
 import blog1 from "../assets/Blog1.png";
 import blog2 from "../assets/Blog2.png";
 
 import features from "../assets/features.svg";
-import search from "../assets/searche.png";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
 
@@ -18,43 +17,8 @@ import Ads from "./Ads";
 import RecentBlog from "./RecentBlog";
 
 export default function Landing() {
-  const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Shop", href: "#" },
-    { name: "About us", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Support", href: "#" },
-  ];
-
   return (
     <div style={{ fontFamily: "Rubik" }}>
-      <header className=" inset-x-0 top-0 z-50 ">
-        <nav
-          aria-label="Global"
-          className="flex w-full items-center justify-between  px-[150px] py-[20px]"
-        >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <img alt="" src={snaplogo} className="h-10 w-auto" />
-            </a>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-m font-medium leading-6 text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
-            <a href="">
-              <img src={search} alt="" />
-            </a>
-          </div>
-        </nav>
-      </header>
-
       <Swiper
         spaceBetween={50}
         slidesPerView={1}

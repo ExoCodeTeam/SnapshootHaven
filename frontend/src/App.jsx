@@ -9,7 +9,7 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <div style={{ minHeight: "80vh" }}>
+      <div>
         <Outlet />
       </div>
       <Footer />

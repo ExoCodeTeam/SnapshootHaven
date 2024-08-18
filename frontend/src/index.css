@@ -10,3 +10,7 @@
   background-size: cover;
   background-position: center;
 }
+
+.recentBlog:hover div {
+  border-color: transparent;
+}

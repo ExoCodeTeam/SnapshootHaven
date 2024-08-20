@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ad1 from '../assets/Ad.jpg';
 import ad2 from '../assets/Ad2.jpg';
-import ad3 from '../assets/ad3.jpg';
+import ad3 from '../assets/Ad3.jpg';
 import ad4 from '../assets/Ad4.jfif';
 
 const ads = [ad1, ad2, ad3, ad4]; // Array of ad images

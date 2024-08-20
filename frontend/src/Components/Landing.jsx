@@ -1,7 +1,7 @@
 import snaplogo from "../assets/snaplogo.svg";
-import Ad from "../assets/ad7.jpg";
-import Ad1 from "../assets/ad6.jpg";
-import Ad2 from "../assets/ad5.jpg"
+import Ad from "../assets/Ad7.jpg";
+import Ad1 from "../assets/Ad6.jpg";
+import Ad2 from "../assets/Ad5.jpg"
 import blog1 from "../assets/Blog1.png";
 import blog2 from "../assets/Blog2.png";
 

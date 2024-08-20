@@ -6,6 +6,7 @@ import Ad1 from "../assets/Ad6.jpg";
 import Ad2 from "../assets/Ad5.jpg"
 import blog1 from "../assets/Blog1.png";
 import blog2 from "../assets/Blog2.png";
+import search from "../assets/searche.png";
 
 import features from "../assets/features.svg";
 import Gallery from "./Gallery";

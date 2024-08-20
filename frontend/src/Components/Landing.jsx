@@ -32,33 +32,6 @@ export default function Landing() {
 
     return (
         <div style={{ fontFamily: "Rubik" }}>
-            <header className=" inset-x-0 top-0 z-50 border-b border-b-2 border-b-[#eee] border-b-solid">
-                <nav
-                    aria-label="Global"
-                    className="flex w-full items-center justify-between  px-[150px] py-[20px] "
-                >
-                    <div className="flex lg:flex-1">
-                        <a href="#" className="-m-1.5 p-1.5">
-                            <img alt="" src={snaplogo} className="h-10 w-auto" />
-                        </a>
-                    </div>
-                    <div className="hidden lg:flex lg:gap-x-12">
-                        {navigation.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="text-m font-medium leading-6 text-gray-900"
-                            >
-                                {item.name}
-                            </a>
-                        ))}
-                        <a href="">
-                            <img src={search} alt="" />
-                        </a>
-                    </div>
-                </nav>
-            </header>
-
             <div className="mx-[150px] ">
                 <Swiper
                     spaceBetween={50}
@@ -140,7 +113,6 @@ export default function Landing() {
                     </button>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 }

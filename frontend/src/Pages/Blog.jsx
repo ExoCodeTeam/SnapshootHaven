@@ -85,6 +85,7 @@ function Blog() {
               date={article.date}
               img={article.img}
               desc={article.desc}
+              id={index}
             />
           ))}
         </div>

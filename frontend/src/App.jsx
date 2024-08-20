@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Landing from "./Components/Landing";
 import Blog from "./Pages/Blog";
 import { Outlet } from "react-router-dom";
+import Article from "./Components/Article";
 
 function Layout() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="blog/:id" element={<Article />} />
       </Route>
     </Routes>
   );

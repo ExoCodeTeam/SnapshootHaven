@@ -1,3 +1,5 @@
+import image from "../assets/image.png";
+import image1 from "../assets/image1.jpg";
 import snaplogo from "../assets/snaplogo.svg";
 import Ad from "../assets/Ad7.jpg";
 import Ad1 from "../assets/Ad6.jpg";
@@ -6,7 +8,6 @@ import blog1 from "../assets/Blog1.png";
 import blog2 from "../assets/Blog2.png";
 
 import features from "../assets/features.svg";
-import search from "../assets/searche.png";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
 
@@ -19,6 +20,7 @@ import Ads from "./Ads";
 import RecentBlog from "./RecentBlog";
 
 export default function Landing() {
+
     const navigation = [
         { name: "Home", href: "#" },
         { name: "Shop", href: "#" },

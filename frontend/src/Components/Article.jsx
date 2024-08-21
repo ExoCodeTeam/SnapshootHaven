@@ -111,6 +111,41 @@ function Article() {
                 </Link>
               </div>
             </div>
+            {/* Comment */}
+            <div>
+              <h3>Comments</h3>
+              <div className="w-full bg-[#EEEEEE] px-20 py-5">
+                <p className="text-[#303841] mb-4">
+                  Your email address will remain confidential. Only your name
+                  will be displayed !
+                </p>
+                <form>
+                  <div className="flex gap-6 mb-6">
+                    <div className="flex-1">
+                      <label className="text-black block mb-2">Name *</label>
+                      <input
+                        type="text"
+                        name="name"
+                        className="p-3 w-full rounded-[5px]"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <label className="text-black block mb-2">Email *</label>
+                      <input
+                        type="email"
+                        name="name"
+                        className="p-3 w-full rounded-[5px] border-[F6C90E]"
+                      />
+                    </div>
+                  </div>
+                  <textarea
+                    placeholder="Type Your Comment here"
+                    type="text"
+                    className="w-full rounded-[5px] py-4 px-6 min-h-[200px]"
+                  />
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>

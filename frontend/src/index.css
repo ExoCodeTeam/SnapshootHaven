@@ -4,6 +4,7 @@
 
 * {
   font-family: "Rubik", serify;
+  box-sizing: border-box;
 }
 
 .gallery div {

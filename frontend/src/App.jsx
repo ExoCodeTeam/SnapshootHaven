@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Landing from "./Components/Landing";
+import Landing from "./Components/Landing/Landing";
 import Blog from "./Pages/Blog";
 import { Outlet } from "react-router-dom";
 import Article from "./Components/Article";
 import AboutUs from "./Pages/AboutUs";
 import Support from "./Pages/Support";
+
 
 
 function Layout() {

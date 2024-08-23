@@ -6,12 +6,12 @@ function Navbar() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "#" },
-    { name: "About us", href: "#" },
+    { name: "About us", href: "/aboutus" },
     { name: "Blog", href: "/blog" },
-    { name: "Support", href: "#" },
+    { name: "Support", href: "/support" },
   ];
   return (
-    <header className=" inset-x-0 top-0 z-50 border-b border-b-2 border-b-[#eee] border-b-solid">
+    <header className=" inset-x-0 top-0 z-50  border-b-2 border-b-[#eee] border-b-solid">
       <nav
         aria-label="Global"
         className="flex w-full items-center justify-between  px-[150px] py-[20px] "

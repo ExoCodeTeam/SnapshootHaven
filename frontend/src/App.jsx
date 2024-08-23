@@ -5,6 +5,9 @@ import Landing from "./Components/Landing";
 import Blog from "./Pages/Blog";
 import { Outlet } from "react-router-dom";
 import Article from "./Components/Article";
+import AboutUs from "./Pages/AboutUs";
+import Support from "./Pages/Support";
+
 
 function Layout() {
   return (
@@ -25,6 +28,8 @@ function App() {
         <Route index element={<Landing />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:id" element={<Article />} />
+        <Route path="/aboutus" element={<AboutUs/>}/>
+        <Route path="/support" element={<Support/>}/>
       </Route>
     </Routes>
   );

@@ -13,7 +13,7 @@ function Footer() {
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac9df66c6fc3d8d29a183fb4744afdd2b59b64f8330a06c6856b887a1a54b360?placeholderIfAbsent=true&apiKey=403df433ee25481d95bb99bca99ab430"
                 alt="Snapshot Haven Logo"
-                class="object-contain max-w-full aspect-[3.23] w-[200px]"
+                className="object-contain max-w-full aspect-[3.23] w-[200px]"
               />
               <p class="mt-4 text-[12px] font-medium text-yellow-400">
                 Your Ultimate Destination for Cameras and Accessories
@@ -33,7 +33,7 @@ function Footer() {
             md:text-left ">
               <div class="flex flex-col ">
                 <a href="#">Home</a>
-                <a href="#" class="mt-5">
+                <a href="#" className="mt-5">
                   Shop
                 </a>
                 <ul class="flex flex-col font-normal  items-center mt-5 w-full text-xs whitespace-nowrap rounded-none text-center 
@@ -41,34 +41,33 @@ function Footer() {
                   <li>
                     <a href="#">Cameras</a>
                   </li>
-                  <li class="mt-4">
+                  <li className="mt-4">
                     <a href="#">Lenses</a>
                   </li>
-                  <li class="self-stretch mt-4">
+                  <li className="self-stretch mt-4">
                     <a href="#">Accessories</a>
                   </li>
                 </ul>
-                <a href="#" class="mt-5">
+                <a href="#" className="mt-5">
                   New Arrivals
                 </a>
-                <a href="#" class="mt-5">
+                <a href="#" className="mt-5">
                   Bundles and Deals
                 </a>
               </div>
-
             </div>
 
             <div class="col-span-3 flex flex-col text-xl font-medium ">
               <nav class="flex flex-col text-center 
             md:text-left">
                 <a href="#">Blog</a>
-                <a href="#" class="mt-5">
+                <a href="#" className="mt-5">
                   About Us
                 </a>
-                <a href="#" class="mt-5">
+                <a href="#" className="mt-5">
                   Support
                 </a>
-                <a href="#" class="mt-5">
+                <a href="#" className="mt-5">
                   Contact us
                 </a>
               </nav>
@@ -80,14 +79,13 @@ function Footer() {
                     support@snapshothaven.com
                   </a>
                 </p>
-                <p class="mt-4">
+                <p className="mt-4">
                   Phone: <a href="tel:+1234567890">+123-456-7890</a>
                 </p>
-                <p class="mt-4">
+                <p className="mt-4">
                   Address: 123 Photography Lane, City, Country
                 </p>
               </address>
-
             </div>
           </div>
 
@@ -137,6 +135,7 @@ function Footer() {
               © 2024 Snapshot Haven . All rights reserved.
             </h1>
           </div>
+        </div>
 
 
 
@@ -146,16 +145,16 @@ function Footer() {
 
 
 
-        </div >
+      </div >
 
 
-        <div class="px-16 py-2  w-full text-sm font-medium bg-yellow-400 text-[#303841] flex justify-center items-center 
+      <div class="px-16 py-2  w-full text-sm font-medium bg-yellow-400 text-[#303841] flex justify-center items-center 
         xl:text-md
         lg:text-sm
         md:text-xs">
-          Made with ❤️ by ExoCode.
-        </div>
-      </footer >
+        Made with ❤️ by ExoCode.
+      </div>
+    </footer >
     </>
   );
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 function RecentBlog({ title, date, desc, img, id }) {
   return (
+
     <Link to={"/blog/" + id} className="recentBlog border-b-4 hover:border-[#F6C90E] border-b-transparent transition-all ease-linear">
       <img src={img} className="rounded-t-m  aspect-[1/0.75]  " />
       <div className="p-[30px] flex flex-col justify-between h-[150px] border border-[#3a475029] rounded-b-md
@@ -21,6 +22,7 @@ function RecentBlog({ title, date, desc, img, id }) {
         xl:text-[16px]
         lg:text-[14px]
         md:text-[11px]">{date}</span>
+
       </div>
     </Link>
   );

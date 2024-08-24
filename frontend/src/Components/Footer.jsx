@@ -137,24 +137,13 @@ function Footer() {
           </div>
         </div>
 
-
-
-
-
-
-
-
-
-      </div >
-
-
-      <div class="px-16 py-2  w-full text-sm font-medium bg-yellow-400 text-[#303841] flex justify-center items-center 
+        <div class="px-16 py-2  w-full text-sm font-medium bg-yellow-400 text-[#303841] flex justify-center items-center 
         xl:text-md
         lg:text-sm
         md:text-xs">
-        Made with ❤️ by ExoCode.
-      </div>
-    </footer >
+          Made with ❤️ by ExoCode.
+        </div>
+      </footer >
     </>
   );
 }

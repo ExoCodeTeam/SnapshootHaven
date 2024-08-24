@@ -1,15 +1,15 @@
 
-import Ad from "../../assets/Ad7.jpg";
-import Ad1 from "../../assets/Ad6.jpg";
-import Ad2 from "../../assets/Ad5.jpg";
-import blog1 from "../../assets/Blog1.png";
-import blog2 from "../../assets/Blog2.png";
+import Ad from "../assets/Ad7.jpg";
+import Ad1 from "../assets/Ad6.jpg";
+import Ad2 from "../assets/Ad5.jpg";
+import blog1 from "../assets/Blog1.png";
+import blog2 from "../assets/Blog2.png";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSortUp } from '@fortawesome/free-solid-svg-icons';
 
-import features from "../../assets/features.svg";
-import Gallery from "./Gallery";
+import features from "../assets/features.svg";
+import Gallery from "../Components/Landing/Gallery";
 import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,8 +23,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
 
-import Ads from "./Ads";
-import RecentBlog from "../RecentBlog";
+import Ads from "../Components/Landing/Ads";
+import RecentBlog from "../Components/RecentBlog";
 
 export default function Landing() {
 

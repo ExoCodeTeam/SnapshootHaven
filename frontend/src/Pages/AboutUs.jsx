@@ -18,6 +18,7 @@ export default function AboutUs() {
             cameras and accessories to help you capture life’s most precious
             moments.
           </p>
+          <div className="bg-yellow-400 h-3 w-[55%] absolute left-0 bottom-0 z-10"></div>
         </div>
       </div>
       <div className="flex flex-col mx-auto w-[78%] my-16">

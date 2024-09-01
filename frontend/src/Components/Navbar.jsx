@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Shop", href: "#" },
+    { name: "Shop", href: "/shop" },
     { name: "About us", href: "/aboutus" },
     { name: "Blog", href: "/blog" },
     { name: "Support", href: "/support" },

@@ -8,9 +8,31 @@ import Article from "./Components/Article";
 import AboutUs from "./Pages/AboutUs";
 import Support from "./Pages/Support";
 import Shop from "./Pages/Shop";
-
-
+import Dashboard from "./Pages/Admin/Dashboard";
+import AdminNavbar from "./Components/Admin/AdminNavbar";
+import AdminSidebar from "./Components/Admin/AdminSidebar";
+import ProdManagment from "./Pages/Admin/ProdManagement";
+import Settings from "./Pages/Admin/Settings";
+import ContManagment from "./Pages/Admin/ContManagement";
+import BlogManagment from "./Pages/Admin/BlogManagement";
 import AdsManagement from "./Pages/AdsManagement";
+
+function AdminLayout() {
+  return (
+    <div className="flex ">
+      <AdminSidebar />
+
+      <div className="w-full">
+        <AdminNavbar />
+        <div style={{ minHeight: "calc(100vh - 82.5px)" }}>
+          <Outlet />
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
 
 function Layout() {
   return (
@@ -27,6 +49,8 @@ function Layout() {
 function App() {
   return (
     <Routes>
+
+      {/* clientside website */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="blog" element={<Blog />} />
@@ -36,6 +60,19 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="admin/ads" element={<AdsManagement />} />
       </Route>
+      {/* adminside website */}
+
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="/admin/product-management" element={<ProdManagment />} />
+        <Route path="/admin/blog-management" element={<BlogManagment />} />
+        <Route path="/admin/content-management" element={<ContManagment />} />
+
+        <Route path="/admin/settings" element={<Settings />} />
+
+
+      </Route>
+
     </Routes>
   );
 }

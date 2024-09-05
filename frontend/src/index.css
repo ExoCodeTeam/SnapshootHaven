@@ -15,3 +15,37 @@
 .recentBlog:hover div {
   border-color: transparent;
 }
+
+ 
+.my-swiper .swiper-pagination {
+  z-index: 20;
+  bottom: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+ 
+
+
+
+.swiper-pagination-bullet {
+  @apply w-2 h-2 bg-[#303841]; /* Tailwind utility for default bullets */
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-[#F6C90E]; /* Tailwind utility for active bullet */
+}
+@media (min-width: 1024px) {
+  .swiper-pagination-bullet {
+    @apply w-4 h-4; /* Larger bullets for medium screens */
+  }
+}
+@media (min-width: 768px) {
+  .swiper-pagination-bullet {
+    @apply w-3 h-3; /* Larger bullets for medium screens */
+  }}
+  @media (max-width: 640px) {
+    .swiper-pagination-bullet {
+      @apply w-0 h-0; /* Larger bullets for medium screens */
+    }
+  }
+ 

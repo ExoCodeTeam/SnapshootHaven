@@ -1,10 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Landing from "./Components/Landing";
+import Landing from "./Pages/Landing";
 import Blog from "./Pages/Blog";
 import { Outlet } from "react-router-dom";
 import Article from "./Components/Article";
+import AboutUs from "./Pages/AboutUs";
+import Support from "./Pages/Support";
+import Shop from "./Pages/Shop";
+
+
 import AdsManagement from "./Pages/AdsManagement";
 
 function Layout() {
@@ -26,6 +31,9 @@ function App() {
         <Route index element={<Landing />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:id" element={<Article />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="admin/ads" element={<AdsManagement />} />
       </Route>
     </Routes>

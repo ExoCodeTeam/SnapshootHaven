@@ -15,7 +15,7 @@ import ProdManagment from "./Pages/Admin/ProdManagement";
 import Settings from "./Pages/Admin/Settings";
 import ContManagment from "./Pages/Admin/ContManagement";
 import BlogManagment from "./Pages/Admin/BlogManagement";
-
+import AdsManagement from "./Pages/AdsManagement";
 
 function AdminLayout() {
   return (
@@ -27,9 +27,7 @@ function AdminLayout() {
         <div style={{ minHeight: "calc(100vh - 82.5px)" }}>
           <Outlet />
         </div>
-
       </div>
-
     </div>
   );
 }
@@ -49,29 +47,25 @@ function Layout() {
 function App() {
   return (
     <Routes>
-
       {/* clientside website */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:id" element={<Article />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/support" element={<Support />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="support" element={<Support />} />
+        <Route path="shop" element={<Shop />} />
       </Route>
       {/* adminside website */}
 
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
-        <Route path="/admin/product-management" element={<ProdManagment />} />
-        <Route path="/admin/blog-management" element={<BlogManagment />} />
-        <Route path="/admin/content-management" element={<ContManagment />} />
-
-        <Route path="/admin/settings" element={<Settings />} />
-
-
+        <Route path="product-management" element={<ProdManagment />} />
+        <Route path="blog-management" element={<BlogManagment />} />
+        <Route path="content-management" element={<ContManagment />} />
+        <Route path="settings" element={<Settings />} />
+        <Route path="ads" element={<AdsManagement />} />
       </Route>
-
     </Routes>
   );
 }

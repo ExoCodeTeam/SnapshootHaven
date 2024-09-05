@@ -4,7 +4,7 @@ import AdsApi from "../api/AdsApi"; // Import the AdsApi object
 function AdsManagement() {
   const [ads, setAds] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [newAd, setNewAd] = useState({ order: "", title: "" });
+  const [newAd, setNewAd] = useState({ order: "", title: "", type: "main" }); // Added type with default "main"
   const [imageFile, setImageFile] = useState(null);
   const [selectedAd, setSelectedAd] = useState(null); // To track the ad being updated
   const [imagePreview, setImagePreview] = useState("");
@@ -41,7 +41,7 @@ function AdsManagement() {
     setSelectedAd(null);
     setImagePreview("");
     setImageFile(null);
-    setNewAd({ order: "", title: "" });
+    setNewAd({ order: "", title: "", type: "main" }); // Reset newAd with default type
     setIsModalOpen(false);
   };
 
@@ -65,7 +65,7 @@ function AdsManagement() {
           ads.reduce((maxId, ad) => (ad.id > maxId ? ad.id : maxId), 1)
         );
       }
-      await AdsApi.createAd(newAd, img_url);
+      await AdsApi.createAd(newAd, img_url); // Include the ad type in newAd
       await fetchAds();
       closeModal(); // Close modal after creation
     } catch (error) {
@@ -76,7 +76,11 @@ function AdsManagement() {
   const handleUpdateAd = async () => {
     if (!selectedAd) return;
     try {
-      let updateData = { order: selectedAd.order, title: selectedAd.title };
+      let updateData = {
+        order: selectedAd.order,
+        title: selectedAd.title,
+        type: selectedAd.type, // Add the type to update
+      };
       if (imageFile) {
         const img_url = selectedAd.img_url
           ? await AdsApi.updateImage(selectedAd.img_url, imageFile)
@@ -122,6 +126,10 @@ function AdsManagement() {
                 </p>
                 <p>
                   <span className="font-semibold">Title:</span> {ad.title}
+                </p>
+                <p>
+                  <span className="font-semibold">Type:</span> {ad.type}{" "}
+                  {/* Display the ad type */}
                 </p>
                 {ad.img_url && (
                   <img
@@ -188,6 +196,23 @@ function AdsManagement() {
               }
               className="w-full p-2 border border-gray-300 rounded-md mb-2"
             />
+
+            {/* Dropdown for Ad Type */}
+            <select
+              name="type"
+              value={selectedAd ? selectedAd.type : newAd.type}
+              onChange={(e) =>
+                selectedAd
+                  ? setSelectedAd({ ...selectedAd, type: e.target.value })
+                  : handleInputChange(e)
+              }
+              className="w-full p-2 border border-gray-300 rounded-md mb-4"
+            >
+              <option value="main">Main</option>
+              <option value="secondary">Secondary</option>
+              <option value="private">Private</option>
+            </select>
+
             <input
               type="file"
               name="image"

@@ -3,11 +3,23 @@ import { split } from "postcss/lib/list";
 import { supabase } from "../config/supabaseClient"; // Import the Supabase client
 
 // Function to fetch all ads
-const fetchAds = async () => {
-  const { data, error } = await supabase.from("ad").select("*");
+const fetchAds = async (type = "all") => {
+  let data, error;
+
+  // Fetch all ads if type is "all"
+  if (type === "all") {
+    ({ data, error } = await supabase.from("ad").select("*"));
+  } else {
+    // Fetch ad by specific id (type)
+    ({ data, error } = await supabase.from("ad").select("*").eq("type", type));
+  }
+
+  // Handle errors
   if (error) {
     throw new Error("Error fetching ads: " + error.message);
   }
+
+  // Return the fetched data
   return data;
 };
 

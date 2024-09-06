@@ -247,5 +247,6 @@ function AdsManagement() {
     </div>
   );
 }
+ 
 
 export default AdsManagement;

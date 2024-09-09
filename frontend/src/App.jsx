@@ -15,7 +15,6 @@ import ProdManagment from "./Pages/Admin/ProdManagement";
 import Settings from "./Pages/Admin/Settings";
 import ContManagment from "./Pages/Admin/ContManagement";
 import BlogManagment from "./Pages/Admin/BlogManagement";
-import AdsManagement from "./Pages/AdsManagement";
 
 function AdminLayout() {
   return (
@@ -64,7 +63,6 @@ function App() {
         <Route path="blog-management" element={<BlogManagment />} />
         <Route path="content-management" element={<ContManagment />} />
         <Route path="settings" element={<Settings />} />
-        <Route path="ads" element={<AdsManagement />} />
       </Route>
     </Routes>
   );

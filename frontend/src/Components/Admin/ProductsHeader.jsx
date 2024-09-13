@@ -3,7 +3,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSortUp, faSortDown, faTrash } from '@fortawesome/free-solid-svg-icons'
 import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';;
 import React, { useState } from 'react';
 
 
@@ -17,12 +16,12 @@ const ProductsHeader = ({ sortConfig, requestSort, totalProducts, selectedCount,
                 <FontAwesomeIcon icon={faSortDown} className="ml-1 opacity-100" />
             );
         }
-        return <FontAwesomeIcon icon={faSortDown} className="ml-1 opacity-0 group-hover:opacity-50" />;
+        return <FontAwesomeIcon icon={faSortUp} className="ml-1 opacity-0 group-hover:opacity-50" />;
     };
 
 
     const isAllSelected = () => {
-        return totalProducts > 0 && selectedCount === totalProducts;
+        return totalProducts > 0 && selectedCount === 6;
     };
 
     return (
@@ -55,16 +54,11 @@ const ProductsHeader = ({ sortConfig, requestSort, totalProducts, selectedCount,
 
             </>)}
             <div className='col-span-1 flex justify-center items-center  pb-[10px] pl-[20px] '>
-                <FormControlLabel
-                    className='no-margin'
-                    control={
-                        <Checkbox
-                            checked={isAllSelected()}
-                            onChange={handleSelectAll}
-                            color="primary"
-                        />
-                    }
-                    label=""
+
+                <Checkbox
+                    checked={isAllSelected()}
+                    onChange={handleSelectAll}
+                    color="primary"
                 />
             </div>
 

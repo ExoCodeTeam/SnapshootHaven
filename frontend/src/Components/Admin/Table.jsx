@@ -5,16 +5,8 @@ import Pagination from '@mui/material/Pagination';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#3A4750',
-        },
-    },
-});
-
 export default function Table({ products }) {
-    const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'desc' });
+    const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'asc' });
     const [selectedProducts, setSelectedProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -35,9 +27,9 @@ export default function Table({ products }) {
     const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const requestSort = (key) => {
-        let direction = 'desc';
-        if (sortConfig.key === key && sortConfig.direction === 'desc') {
-            direction = 'asc';
+        let direction = 'asc';
+        if (sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
         }
         setSortConfig({ key, direction });
     };
@@ -74,47 +66,47 @@ export default function Table({ products }) {
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <div className='flex flex-col justify-between h-full'>
-                <div className='flex flex-col gap-[30px]'>
-                    <ProductsHeader
-                        sortConfig={sortConfig}
-                        requestSort={requestSort}
-                        totalProducts={products.length}
-                        selectedCount={selectedProducts.length}
-                        handleSelectAll={handleSelectAll}
-                        handleDelete={handleDeleteSelected}
-                    />
-                    <div className='flex flex-col gap-5'>
-                        {currentProducts.map((product) => (
-                            <Product
-                                key={product.id}
-                                id={product.id}
-                                name={product.name}
-                                price={product.price}
-                                category={product.category}
-                                isSelected={selectedProducts.includes(product.id)}
-                                handleSelect={handleSelectProduct}
-                                handleEdit={() => console.log('Edit product:', product.id)}
-                                handleDelete={() => handleDeleteSelected(product.id)}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <div className='flex justify-end'>
-                    <Stack spacing={2}>
-                        <Pagination
-                            variant="outlined"
-                            shape="rounded"
-                            size="large"
-                            count={Math.ceil(products.length / itemsPerPage)}
-                            page={currentPage}
-                            onChange={handlePageChange}
-                            color="primary"
+
+        <div className='flex flex-col justify-between h-full'>
+            <div className='flex flex-col gap-[30px]'>
+                <ProductsHeader
+                    sortConfig={sortConfig}
+                    requestSort={requestSort}
+                    totalProducts={products.length}
+                    selectedCount={selectedProducts.length}
+                    handleSelectAll={handleSelectAll}
+                    handleDelete={handleDeleteSelected}
+                />
+                <div className='flex flex-col gap-5'>
+                    {currentProducts.map((product) => (
+                        <Product
+                            key={product.id}
+                            id={product.id}
+                            name={product.name}
+                            price={product.price}
+                            category={product.category}
+                            isSelected={selectedProducts.includes(product.id)}
+                            handleSelect={handleSelectProduct}
+                            handleEdit={() => console.log('Edit product:', product.id)}
+                            handleDelete={() => handleDeleteSelected(product.id)}
                         />
-                    </Stack>
+                    ))}
                 </div>
             </div>
-        </ThemeProvider>
+            <div className='flex justify-end'>
+                <Stack spacing={2}>
+                    <Pagination
+                        variant="outlined"
+                        shape="rounded"
+                        size="large"
+                        count={Math.ceil(products.length / itemsPerPage)}
+                        page={currentPage}
+                        onChange={handlePageChange}
+                        color="primary"
+                    />
+                </Stack>
+            </div>
+        </div>
+
     );
 }

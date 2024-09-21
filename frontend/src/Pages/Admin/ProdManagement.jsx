@@ -4,27 +4,38 @@ import settings from "../../assets/Admin/settings-w.svg";
 import plus from "../../assets/Admin/+.svg";
 import Table from "../../Components/Admin/Table";
 import MiniFilter from "../../Components/Admin/MiniFilter";
-import { Dialog, DialogTitle, DialogContent, IconButton, Button } from '@mui/material';
+import { Dialog, DialogContent, IconButton } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import CategoryManage from '../../Components/Admin/CategoryManage';
+import AddProductModal from '../../Components/Admin/AddProductModal';
 
 export default function ProdManagment() {
     const [openFilter, setOpenFilter] = useState(false);
     const [openCategory, setOpenCategory] = useState(false);
+    const [openAddProduct, setOpenAddProduct] = useState(false);
 
-    // Open/Close handlers for both dialogs
+    // Open/Close handlers for dialogs
     const handleOpenFilter = () => setOpenFilter(true);
     const handleCloseFilter = () => setOpenFilter(false);
 
     const handleOpenCategory = () => setOpenCategory(true);
     const handleCloseCategory = () => setOpenCategory(false);
 
+    const handleOpenAddProduct = () => setOpenAddProduct(true);
+    const handleCloseAddProduct = () => setOpenAddProduct(false);
+
     const sampleProducts = [
         { id: 1, name: 'Camera', price: 1000, category: 'Cameras' },
         { id: 2, name: 'Lens', price: 200, category: 'Lenses' },
         { id: 3, name: 'Tripod', price: 150, category: 'Accessories' },
         // Add more sample data...
+    ];
+    const categories = [
+        { id: 1, name: 'Cameras' },
+        { id: 2, name: 'Lenses' },
+        { id: 3, name: 'Accessories' },
+        // Add more categories as needed...
     ];
 
     return (
@@ -38,9 +49,10 @@ export default function ProdManagment() {
                         className="h-[50px] p-[10px] text-[18px] placeholder:text-[20px] placeholder:text-[#303841] placeholder:text-opacity-30 
                     placeholder:font-semibold focus:outline-none focus:border-[#F6C90E] focus:border-b-2"
                     />
-                    <button className="bg-[#F6C90E] hover:bg-[#FFCE00] flex  px-[15px] h-[40px] items-center justify-center rounded-md whitespace-nowrap">
+                    <button className="bg-[#F6C90E] hover:bg-[#FFCE00] flex px-[15px] h-[40px] items-center justify-center rounded-md whitespace-nowrap">
                         <FontAwesomeIcon className='text-[#3A4750]' icon={faMagnifyingGlass} />
-                    </button></div>
+                    </button>
+                </div>
 
                 <div className="flex gap-5">
                     <button
@@ -59,7 +71,10 @@ export default function ProdManagment() {
                         <img src={settings} className="h-[20px]" alt="" />
                     </button>
 
-                    <button className="bg-[#F6C90E] hover:bg-[#FFCE00] flex gap-[10px] px-[20px] h-[40px] items-center justify-center rounded-md whitespace-nowrap">
+                    <button
+                        onClick={handleOpenAddProduct}
+                        className="bg-[#F6C90E] hover:bg-[#FFCE00] flex gap-[10px] px-[20px] h-[40px] items-center justify-center rounded-md whitespace-nowrap"
+                    >
                         <h1 className="text-[16px] font-medium text-[#3A4750]">Add Product</h1>
                         <img src={plus} className="h-[20px]" alt="" />
                     </button>
@@ -104,10 +119,28 @@ export default function ProdManagment() {
                 </DialogContent>
             </Dialog>
 
+            {/* Add Product Dialog */}
+            <Dialog open={openAddProduct} onClose={handleCloseAddProduct} >
+                <IconButton
+                    aria-label="close"
+                    onClick={handleCloseAddProduct}
+                    sx={{
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color: (theme) => theme.palette.grey[500],
+                    }}
+                >
+                    <FontAwesomeIcon icon={faTimes} />
+                </IconButton>
+                <DialogContent>
+                    <AddProductModal onClose={handleCloseAddProduct} categories={categories} />
+                </DialogContent>
+            </Dialog>
+
             <div className="h-full">
                 <Table products={sampleProducts} />
             </div>
         </div>
     );
 }
-

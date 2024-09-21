@@ -74,7 +74,7 @@ export default function ShopGall() {
         <div className="flex flex-col col-span-9 items-end gap-[50px]">
             <div className="links flex justify-between w-[100%] sm:w-[50%]">
                 <h1
-                    className={`cursor-pointer text-[10px] ${activeLink === 'Best Selling' ? 'border-b-4 border-yellow-500' : ''}
+                    className={`cursor-pointer text-[10px] ${activeLink === 'Best Selling' ? 'border-b-4 bg-[#F6C90E]' : ''}
                     lg:text-[16px]
                     xl:text-[20px]
                     sm:text-[12px]
@@ -84,7 +84,7 @@ export default function ShopGall() {
                     Best Selling
                 </h1>
                 <h1
-                    className={`cursor-pointer text-[10px] ${activeLink === 'New Arrivals' ? 'border-b-4 border-yellow-500' : ''}
+                    className={`cursor-pointer text-[10px] ${activeLink === 'New Arrivals' ? 'border-b-4 bg-[#F6C90E]' : ''}
                    lg:text-[16px]
                     xl:text-[20px]
                     sm:text-[12px]`}
@@ -93,7 +93,7 @@ export default function ShopGall() {
                     New Arrivals
                 </h1>
                 <h1
-                    className={`cursor-pointer text-[10px] ${activeLink === 'Top Rated' ? 'border-b-4 border-yellow-500' : ''}
+                    className={`cursor-pointer text-[10px] ${activeLink === 'Top Rated' ? 'border-b-4 bg-[#F6C90E]' : ''}
                    lg:text-[16px]
                     xl:text-[20px]
                     sm:text-[12px]`}

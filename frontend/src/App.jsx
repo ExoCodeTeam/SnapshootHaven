@@ -16,6 +16,8 @@ import Settings from "./Pages/Admin/Settings";
 import ContManagment from "./Pages/Admin/ContManagement";
 import BlogManagment from "./Pages/Admin/BlogManagement";
 import AdsManagement from "./Pages/AdsManagement";
+import Login from "./Pages/Admin/Login";
+import PasswordReset from "./Pages/Admin/PasswordReset";
 
 function AdminLayout() {
   return (
@@ -56,6 +58,12 @@ function App() {
         <Route path="support" element={<Support />} />
         <Route path="shop" element={<Shop />} />
       </Route>
+
+
+      <Route path="/admin/login" element={<Login />} />
+      <Route path="/admin/forgot-password" element={<PasswordReset />} />
+
+
       {/* adminside website */}
 
       <Route path="/admin" element={<AdminLayout />}>

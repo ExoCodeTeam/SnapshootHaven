@@ -1,5 +1,4 @@
 // AdsApi.js
-import { split } from "postcss/lib/list";
 import { supabase } from "../config/supabaseClient"; // Import the Supabase client
 
 // Function to fetch all ads

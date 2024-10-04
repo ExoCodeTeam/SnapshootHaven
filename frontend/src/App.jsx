@@ -15,6 +15,7 @@ import ProdManagment from "./Pages/Admin/ProdManagement";
 import Settings from "./Pages/Admin/Settings";
 import ContManagment from "./Pages/Admin/ContManagement";
 import BlogManagment from "./Pages/Admin/BlogManagement";
+import ProductMangDev from "./Pages/Admin/ProductMangDev";
 
 function AdminLayout() {
   return (
@@ -63,6 +64,7 @@ function App() {
         <Route path="blog-management" element={<BlogManagment />} />
         <Route path="content-management" element={<ContManagment />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="product-dev" element={<ProductMangDev />} />
       </Route>
     </Routes>
   );

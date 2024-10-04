@@ -15,9 +15,11 @@ import ProdManagment from "./Pages/Admin/ProdManagement";
 import Settings from "./Pages/Admin/Settings";
 import ContManagment from "./Pages/Admin/ContManagement";
 import BlogManagment from "./Pages/Admin/BlogManagement";
+import ProductMangDev from "./Pages/Admin/ProductMangDev";
 import AdsManagement from "./Pages/AdsManagement";
 import Login from "./Pages/Admin/Login";
 import PasswordReset from "./Pages/Admin/PasswordReset";
+
 
 function AdminLayout() {
   return (
@@ -72,7 +74,7 @@ function App() {
         <Route path="blog-management" element={<BlogManagment />} />
         <Route path="content-management" element={<ContManagment />} />
         <Route path="settings" element={<Settings />} />
-        <Route path="ads" element={<AdsManagement />} />
+        <Route path="product-dev" element={<ProductMangDev />} />
       </Route>
     </Routes>
   );
